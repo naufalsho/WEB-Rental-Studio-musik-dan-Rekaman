@@ -8,8 +8,8 @@ Project Web - Tugas Besar Kuliah
   <img src="/../main/Screenshoot Aplikasi/4.jpg" name="menu-utama2">
   <img src="/../main/Screenshoot Aplikasi/5.jpg" name="tarif">
   <img src="/../main/Screenshoot Aplikasi/6.jpg" name="booking">
-  <img src="/../main/Screenshoot Aplikasi/7.jpg" name="contact">
-  <img src="/../main/Screenshoot Aplikasi/8.jpg" name="about">
+  <img src="/../main/Screenshoot Aplikasi/7.png" name="contact">
+  <img src="/../main/Screenshoot Aplikasi/8.png" name="about">
   
 # Description
 Pengembangan dengan:
