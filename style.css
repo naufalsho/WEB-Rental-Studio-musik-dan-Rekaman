@@ -1,0 +1,343 @@
+/* 
+    @author - Naufal Sholahuddin
+*/
+
+body,html{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    overflow-x:hidden ;
+}
+
+.box-shadow{
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.877), 5px 5px 8px rgb(0, 0, 0);
+}
+
+/* css navigasi menu -  */
+    .navigasi{
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        display: inline-block;
+        background-color:rgb(28, 29, 29);
+        text-align: center;
+        align-items: center;
+    }
+
+    .navigasi ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        float: right;
+    }
+    .navigasi li{
+        display: inline-block;
+        
+    }
+    .navigasi li.a-box-nav a{
+        width: 130px;
+        height: 80px;
+        color:white;
+        line-height: 73px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+    }
+
+    .navigasi li.a-box-nav a:hover, .dropdown_menu:hover .dropbtn{
+        background-color:rgba(211, 208, 51, 0.534);
+        transition: 0.3s;
+    }
+      
+     
+      li.dropdown_menu {
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(28, 29, 29);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      
+      .dropdown-content a:hover {
+          background-color: #f1f1f1;
+        }
+      
+      .dropdown_menu:hover .dropdown-content {
+        display: block;
+      }
+
+
+    /* logo pada navigasi menu */
+    
+    #img-logo {
+        width:90px;
+        height:70px;
+        float: left;
+        margin: 5px;
+        border-radius: 30px;
+        margin-left: 10px;
+        box-shadow:1px 1px 1px 3px rgba(233, 229, 4, 0.459);
+    }
+    .navigasi .logo span{
+        color: white;
+        font-size: 16pt;
+        line-height: 30px;
+        float: left;
+        margin-left: -20px;
+        margin-top: 5px; 
+        text-shadow: 2px 3px 1px #000000;
+    }
+    .navigasi .logo font{
+        color: rgb(233, 229, 4);
+        text-shadow: 3px 2px 1px rgb(233, 153, 4);
+        font-weight: bold;
+    }
+
+    /* end */
+
+    /* button login pada, navigasi menu */
+    .navigasi #login{
+        width: 120px;
+        height: 45px;
+        margin:0 40px 0 100px;
+        border-radius: 20px;
+        color: white;
+        background-color: rgb(170, 168, 18);
+        cursor: pointer;
+    }
+    .navigasi #login:hover{
+        background-color: rgb(233, 153, 4);
+    }
+    /* end */
+
+/* end navigasi menu */
+
+/* css HomePage */
+.container_home{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-image:url(./assets/background-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.container_home .text_right{
+    width: 55%;
+    height: 100%;
+    float: right;
+    background-color: rgba(0, 0, 0, 0.671);
+}
+
+.container_home .img_left{
+    float: left;
+    width: 45%;
+    height: 100%;
+    background:none;
+}
+
+.text_right div, .img_left div{
+    width: 87%;
+    height: 79%;
+    padding-top: 80px;
+    margin:40px;
+    display: inline-block;
+}
+
+.container_home div h2, h1{
+    line-height: 1.5em;
+}
+
+.container_home div h1{
+    padding-left: 7%;
+}
+
+#slideIframe{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border:1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0px 3px 10px #000;
+}
+
+/* end homePage */
+
+/* css galleryPage */
+.container_galery{
+    margin:0;
+    padding: 0;
+    padding-top: 80px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-image:url(./assets/background-1.jpg);
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
+
+.box_galery{
+    width: 100%;
+    height: 75%;
+    padding:0;
+    margin:0;
+    background-color: rgba(0, 0, 0, 0.671);
+}
+
+.box_galery a{
+    width: 40vh;
+    height: 30vh;
+    margin: 20px;
+    display: inline-block;
+}
+.box_galery a img{
+    width: 100%;
+    height: 100%;
+    border:1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+}
+.box_galery a img:hover{
+    cursor: pointer;
+    border: 1px solid rgb(233, 153, 4);
+    box-shadow: 0px 3px 10px #000,0px 3px 15px #000;
+
+    transition: 0.2s;
+}
+/* end GalleryPage */
+
+/* css tarif */
+.container_tarif{
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    display: inline-block;
+    text-align: center;
+    background-image:url(./assets/background-1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+/* end tarifpage*/
+
+/* css transaksi page */
+.container-transaksi{
+    width: 100%;
+    height: 100%; 
+    padding-top: 100px;
+    display: inline-block;
+    text-align: center;
+    background-image:url(./assets/background-1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+/* end transaksi page */
+
+
+/* css Footer */
+.container_footer{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    background-color:rgb(28, 29, 29);
+}
+.container_footer #contact, .container_footer #pesan{
+    width: 48%;
+    height: 100%;
+    color: white;
+    margin: 20px;
+}
+
+.info_kantor{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.info_kantor1, .info_kantor2{
+    width:100%;
+    height: auto;
+}
+
+.contact-form{
+    background-color: rgba(0,0,0,0.2);
+    padding:12px;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 12px;
+}
+
+.contact-form input[type=text], input[type=tel], input[type=email], textarea{
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    padding: 4px;
+    display: block;
+    box-sizing: border-box;
+}
+
+.contact-form input[type=submit]{
+    width: 100px;
+    height: 40px;
+    background-color:rgba(211, 208, 51, 0.534);
+    color: white;
+    border-radius: 5px;
+}
+
+.contact-form input[type=submit]:hover{
+    background-color:rgb(168, 166, 13);
+    cursor: pointer;
+}
+
+
+/* end Footer */
+
+
+/* css AboutPage */
+.container_about{
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    background-image:url(./assets/background-3.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color:white;
+}
+.container_about .content_about{
+    margin: auto 60px;
+}
+
+.box_develop{
+    width: 100%;
+    height: fit-content;
+    padding:0;
+    margin:0 ;
+    text-align: center;
+}
+
+.box_develop a{
+    width: 150px;
+    height: 250px;
+    margin: 3%;
+    display: inline-block;
+}
+.box_develop a img{
+    border-radius: 50%;
+}
+/* end AboutPage */

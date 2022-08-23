@@ -1,0 +1,78 @@
+.form-popup-login, .form-popup-sign-up{
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    
+  }
+  /* Add styles to the form container */
+  .form-login-container, .form-sign-up-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.671);
+    display: block;
+  }
+  .form-login-container #a-login-signup, .form-sign-up-container #a-login-signup{
+      text-decoration: underline;
+      color: rgb(233, 153, 4);
+      cursor: pointer;
+  }
+  .login-signup{
+      width: 100%;
+      display: inline-block;
+  }
+  
+  /* Full-width input fields */
+  .form-login-container input[type=email],
+  .form-sign-up-container input[type=email]{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  .form-login-container input[type=password],
+  .form-sign-up-container input[type=password] {
+    display: block;
+    width: 91%;
+    padding: 10px;
+    margin-left: 20px;
+    margin: 5px 0px 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  /* When the inputs get focus, do something */
+  .form-login-container input[type=text]:focus, 
+  .form-login-container input[type=password]:focus,
+  .form-sign-up-container input[type=text]:focus,
+  .form-sign-up-container input[type=password]:focus{ 
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-login-container .btn,
+  .form-sign-up-container .btn {
+    background-color: rgb(170, 168, 18);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-login-container .cancel,
+  .form-sign-up-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  form-login-container .btn:hover, .open-button:hover .form-sign-up-container .btn:hover {
+    opacity: 1;
+  }

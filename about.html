@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loginSignUpStyle.css">
+</head>
+<body>
+    <header>
+        <header>
+            <!-- Navigasi menu start -->
+            <div class="navigasi box-shadow">
+                <a id="logo" href="./index.html#home">
+                    <div class="logo">
+                        <img src="assets/logo-1.png" id="img-logo">
+                    <span><font>Studio Rental </font><br>&emsp;&emsp;&emsp;& Rekaman.</span>
+                </div>
+            </a>    
+                <ul>
+                    <li class="a-box-nav"><a href="./index.html#home">Home</a></li><li class="dropdown_menu a-box-nav">
+                        <a href="#service" class="dropbtn">Service</a>
+                        <div class="dropdown-content">
+                                <a href="./index.html#tarif">Tarif & Biaya</a>
+                                <a href="./index.html#booking-page">Booking/Transaksi</a>
+                        </div>
+                    </li><li class="a-box-nav"><a href="#about">About us.</a></li>
+                    <li><input class="open-button box-shadow" id="login" type="button" value="Login" onclick="openFormLogin()">
+                    
+                        <div class="form-popup-login" id="myFormLogin">
+                            <form name="form-login" method="POST" action="./php/login.php" class="form-login-container">
+                                <div class="login-signup">
+                                    <h1>Login</h1>
+                                    <span><a onclick="openFormSignUp()" style="float: right;" id="a-login-signup">Sign Up</a></span>
+                                </div>
+                                <hr>
+                                <label for="user-email">Email : </label>
+                                <input type="email" name="login-email" id="" required/>
+                    
+                                <label for="password">Password : </label>
+                                <input type="password" name="login-password" id="" required/>
+                                
+                                <div class="clearfix">
+                                    <button type="submit" class="btn">Login</button>
+                                    <button type="button" onclick="closeFormLogin()" class="btn cancel">Cancel</button>   
+                                </div>
+                            </form>
+                        </div>
+    
+                        
+                        <div class="form-popup-sign-up" id="myFormSignUp">
+                            <form name="form-sign-up" method="POST" action="./php/signUp.php" class="form-sign-up-container">
+                                <h1>Sign Up</h1>
+                                <span>Already Have an Account?<a onclick="openFormLogin()" id="a-login-signup">Login</a></span>
+                                
+                                <hr>
+                                <label for="user-email">Email : </label>
+                                <input type="email" name="sign-up-email" id="" required/>
+                    
+                                <label for="password">Password : </label>
+                                <input type="password" name="sign-up-password" id="" required/>
+                                
+                                <label for="repeat-pw">Repeat Password :</label>
+                                <input type="password" name="sign-up-repeat-pw" id="" required/>
+    
+                                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                    
+                                <div class="clearfix">
+                                    <button type="submit" class="btn">Sign Up</button>
+                                    <button type="button" onclick="closeFormSignUp()" class="btn cancel">Cancel</button>   
+                                </div>
+                            </form>
+                        </div>    
+    
+                    </li> 
+                </ul>
+            </div>
+            <!-- Navigasi menu end -->
+        </header>
+    <div class="container_about">
+        <div class="content_about">
+            <h1 align="center">About Us.</h1>
+            <h1>Tugas Project Kelompok Universitas Indraprasta PGRI Jakarta.
+				<br>Tugas besar mata kuliah pemrograman Web 2 - smester 6. 
+            </h1>
+            <h1>
+                Pengembangan Program,
+            </h1>
+            <p align="center">Dibuat Oleh/Develop By.</p>
+            <div class="box_develop">
+                <a><img src="assets/profile1.jpg" alt="profile1" width="150" height="150">Naufal Sholahuddin (201843501399)(Pengkodingan Program)<br></a>
+                <a><img src="assets/profile1.jpg" alt="profile1" width="150" height="150">Bama Al Farhan Nariyyah (201843500992)(Desain UI)</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container_footer">
+                    <a id="contact">
+                        <h1>Kantor Kami </h1>
+                        <hr width="20%" align="left">
+                        <br><br>
+                        <div class="info_kantor">
+                            <div class="info_kantor1">
+                                <p>Address : ...</p>
+                                <p>000-00000000</p>
+                                <p>examplemail@mail.com</p>
+                            </div>
+                            <div class="info_kantor2">
+                                <p>Jam Kerja</p>
+                                <hr width="20%" align="left">
+                                <p>Senin - Sabtu</p>
+                                <p>(07:00 - 23:00)</p>
+                            </div>
+                        </div> 
+                    </a>
+                    <a id="pesan">
+                        <h1>Contact</h1>
+                        <hr width="20%" align="left">
+                        <br>
+                        <div class="contact-form">
+                            <form onsubmit="alert('Berhasil Submit !');">
+
+                                            <label for="nama">Nama</label>
+                                            <input type="text" id="nama" placeholder="Nama Lengkap..." required >
+
+                                            <label for="telp">Telepon</label>
+                                            <input type="tel" id="telepon" placeholder="Nomor hp...">
+
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" placeholder="Email..." required >
+
+                                            <label for="pesan">Pesan</label>
+                                            <textarea rows="4" cols="50" placeholder="Isikan sesuatu..."></textarea>
+
+                                            <input type="submit" id="kirim-footer" value="Kirim" class="box-shadow">
+                            </form>
+                        </div>
+                        
+                    </a>
+                    
+        </div>
+    </footer>
+    <script type="text/javascript">
+        function openFormLogin() {
+            document.getElementById("myFormSignUp").style.display = "none";
+            document.getElementById("myFormLogin").style.display = "block";
+        }
+            
+        function closeFormLogin() {
+            document.getElementById("myFormLogin").style.display = "none";
+        }
+        function openFormSignUp() {
+            document.getElementById("myFormLogin").style.display = "none";
+            document.getElementById("myFormSignUp").style.display = "block";
+        }
+            
+        function closeFormSignUp() {
+            document.getElementById("myFormSignUp").style.display = "none";
+        }
+    </script>
+</body>
+</html>

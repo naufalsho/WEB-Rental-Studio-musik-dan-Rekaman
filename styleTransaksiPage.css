@@ -1,0 +1,42 @@
+
+#IframeJadwal{
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+}
+.content-transaksi input[type=submit]{
+    width: 100px;
+    height: 40px;
+    background-color:rgba(211, 208, 51, 0.534);
+    color: white;
+    border-radius: 5px;
+}
+
+.content-transaksi input[type=submit]:hover{
+    background-color:rgb(168, 166, 13);
+    cursor: pointer;
+}
+
+
+.form-transaksi{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: rgba(0, 0, 0, 0.671);
+    padding:0 20px
+}
+.content-jadwal{
+    width: 100%;
+    height: 100%;
+}
+.content-transaksi{
+    margin-left: 20px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding:30px;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.content-transaksi input,select,textarea{
+    display: block;
+}

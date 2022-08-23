@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {box-sizing: border-box;}
+        ul {list-style-type: none;}
+        body {font-family: Verdana, sans-serif;}
+        
+        .month {
+          padding: 70px 25px;
+          width: 100%;
+          background: #1abc9c;
+          text-align: center;
+        }
+        
+        .month ul {
+          margin: 0;
+          padding: 0;
+        }
+        
+        .month ul li {
+          color: white;
+          font-size: 20px;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+        }
+        
+        .month .prev {
+          float: left;
+          padding-top: 10px;
+          cursor: pointer;
+        }
+        
+        .month .next {
+          float: right;
+          padding-top: 10px;
+          cursor: pointer;
+        }
+        
+        .weekdays {
+          margin: 0;
+          padding: 10px 0;
+          background-color: #ddd;
+        }
+        
+        .weekdays li {
+          display: inline-block;
+          width: 13.6%;
+          color: #666;
+          text-align: center;
+        }
+        
+        .days {
+          padding: 10px 0;
+          background: #eee;
+          margin: 0;
+        }
+        
+        .days li {
+          list-style-type: none;
+          display: inline-block;
+          width: 13.6%;
+          text-align: center;
+          margin-bottom: 5px;
+          font-size:12px;
+          color: #777;
+        }
+        
+        .days li .active {
+          padding: 5px;
+          background: #1abc9c;
+          color: white !important
+        }
+        
+        /* Add media queries for smaller screens */
+        @media screen and (max-width:720px) {
+          .weekdays li, .days li {width: 13.1%;}
+        }
+        
+        @media screen and (max-width: 420px) {
+          .weekdays li, .days li {width: 12.5%;}
+          .days li .active {padding: 2px;}
+        }
+        
+        @media screen and (max-width: 290px) {
+          .weekdays li, .days li {width: 12.2%;}
+        }
+        </style>
+          <link rel="stylesheet" href="styleJadwalPage.css">
+        </head>
+        <body>
+        <div class="month">      
+          <ul>
+            <li class="prev" onclick="clickPrev()">&#10094;</li>
+            <li class="next" onclick="clickNext()">&#10095;</li>
+            <li>
+              <h3 id="bulan">August</h3>
+              <span id="tahun" style="font-size:18px"></span>
+            </li>
+          </ul>
+        </div>
+        
+        <ul class="weekdays">
+          <li>Minggu</li>
+          <li>Senin</li>
+          <li>Selasa</li>
+          <li>Rabu</li>
+          <li>Kamis</li>
+          <li>Jum'at</li>
+          <li>Sabtu</li>
+        </ul>
+        
+        <ul class="days">  
+          <li id="tgl1">1</li>
+          <li id="tgl2">2</li>
+          <li id="tgl3">3</li>
+          <li id="tgl4">4</li>
+          <li id="tgl5">5</li>
+          <li id="tgl6">6</li>
+          <li id="tgl7">7</li>
+          <li id="tgl8">8</li>
+          <li id="tgl9">9</li>
+          <li id="tgl10"><span class="active">10</span></li>
+          <li id="tgl11">11</li>
+          <li id="tgl12">12</li>
+          <li id="tgl13">13</li>
+          <li id="tgl14">14</li>
+          <li id="tgl15">15</li>
+          <li id="tgl16">16</li>
+          <li id="tgl17">17</li>
+          <li id="tgl18">18</li>
+          <li id="tgl19">19</li>
+          <li id="tgl20">20</li>
+          <li id="tgl21">21</li>
+          <li id="tgl22">22</li>
+          <li id="tgl23">23</li>
+          <li id="tgl24">24</li>
+          <li id="tgl25">25</li>
+          <li id="tgl26">26</li>
+          <li id="tgl27">27</li>
+          <li id="tgl28">28</li>
+          <li id="tgl29">29</li>
+          <li id="tgl30">30</li>
+          <li id="tgl31">31</li>
+          <li id="tgl32"></li>
+          <li id="tgl33"></li>
+          <li id="tgl34"></li>
+          <li id="tgl35"></li>
+        </ul>
+    <script>
+    function day(month, day, year) {
+        let y = year - (14 - month) / 12;
+        let x = y + y/4 - y/100 + y/400;
+        let m = month + 12 * ((14 - month) / 12) - 2;
+        let d = (day + x + (31*m)/12) % 7;
+        return d;
+    }
+
+    // return true if the given year is a leap year
+    function isLeapYear(year) {
+        if  ((year % 4 == 0) && (year % 100 != 0)) return true;
+        if  (year % 400 == 0) return true;
+        return false;
+    }
+
+    // TODO code application logic here
+    const date = new Date();
+
+    let month = date.getMonth() + 1;     // month (today)
+    let year = date.getFullYear();     // year (today)
+    
+
+    // months[i] = name of month i
+    const months = [
+        "",                               // leave empty so that months[1] = "January"
+        "January", "February", "March",
+        "April", "May", "June",
+        "July", "August", "September",
+        "October", "November", "December"
+    ];
+
+    // days[i] = number of days in month i
+    const days = [
+        0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
+    ];
+
+
+
+    // check for leap year
+    if (month == 2 && isLeapYear(year)) days[month] = 29;
+
+
+    // // print calendar header
+    document.getElementById('bulan').innerHTML = months[month];
+    document.getElementById('tahun').innerHTML = year;
+    // System.out.println("   " + months[month] + " " + year);
+    // System.out.println(" S  M Tu  W Th  F  S");
+
+    // starting day
+    let d = day(month, 1, year);
+    //tgl date day
+    // // print the calendar
+    counter = 1;
+    for (let i = 0; i < d; i++){
+      document.getElementById('tgl'+counter).innerHTML = "";
+      counter++;
+    }
+    for (let i = 1; i <= days[month]; i++) {
+      document.getElementById('tgl'+counter).innerHTML = i;
+      counter++;
+    }
+
+    function clickNext(){
+      month++;
+      if(month == 13){
+        month = 1;
+        year++;
+      }
+      document.getElementById('bulan').innerHTML = months[month];
+      document.getElementById('tahun').innerHTML = year;
+      // starting day
+      d = day(month, 1, year);
+      //tgl date day
+      // // print the calendar
+      counter = 0;
+      for (let i = 0; i < d; i++){
+        counter++;
+        document.getElementById('tgl'+counter).innerHTML = "" ;
+      }
+      for (let i = 1; i <= days[month]; i++) {
+        
+        counter++;
+        document.getElementById('tgl'+counter).innerHTML = i;
+      }
+    }
+
+    function clickPrev(){
+      month = month - 1;
+      if(month == 0){
+        month = 12;
+        year--;
+      }
+      document.getElementById('bulan').innerHTML = months[month];
+      document.getElementById('tahun').innerHTML = year;
+      // starting day
+      d = day(month, 1, year);
+      //tgl date day
+      // // print the calendar
+      counter = 0;
+      for (let i = 0; i < d; i++){
+        counter++;
+        document.getElementById('tgl'+counter).innerHTML = "";
+      }
+      for (let i = 1; i <= days[month]; i++) {
+        document.getElementById('tgl'+counter).innerHTML = i;
+        counter++;
+      }
+    }
+    
+    </script>
+    </body>    
+</html>

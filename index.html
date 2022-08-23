@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleTarifPage.css">
+    <link rel="stylesheet" href="loginSignUpStyle.css">
+    <link rel="stylesheet" href="styleTransaksiPage.css">
+</head>
+<body>
+    <header>
+        <!-- Navigasi menu start -->
+        <div class="navigasi box-shadow">
+            <a id="logo" href="#home">
+                <div class="logo">
+                    <img src="assets/logo-1.png" id="img-logo">
+                    <span><font>Studio Rental </font><br>&emsp;&emsp;&emsp;& Rekaman.</span>
+                </div>
+            </a>    
+            <ul>
+                <li class="a-box-nav"><a href="#home">Home</a></li><li class="dropdown_menu a-box-nav">
+                    <a href="#service" class="dropbtn">Service</a>
+                    <div class="dropdown-content">
+                            <a href="#tarif">Tarif & Biaya</a>
+                            <a href="#booking-page">Booking/Transaksi</a>
+                    </div>
+                </li><li class="a-box-nav"><a href="about.html">About us.</a></li>
+                <li><input class="open-button box-shadow" id="login" type="button" value="Login" onclick="openFormLogin()">
+                    
+                    <div class="form-popup-login" id="myFormLogin">
+                        <form name="form-login" method="POST" action="./php/login.php" class="form-login-container">
+                            <div class="login-signup">
+                                <h1>Login</h1>
+                                <span><a onclick="openFormSignUp()" style="float: right;" id="a-login-signup">Sign Up</a></span>
+                            </div>
+                            <hr>
+                            <label for="user-email">Email : </label>
+                            <input type="email" name="login-email" id="" required/>
+                
+                            <label for="password">Password : </label>
+                            <input type="password" name="login-password" id="" required/>
+                            
+                            <div class="clearfix">
+                                <button type="submit" class="btn">Login</button>
+                                <button type="button" onclick="closeFormLogin()" class="btn cancel">Cancel</button>   
+                            </div>
+                        </form>
+                    </div>
+
+                    
+                    <div class="form-popup-sign-up" id="myFormSignUp">
+                        <form name="form-sign-up" method="POST" action="./php/signUp.php" class="form-sign-up-container">
+                            <h1>Sign Up</h1>
+                            <span>Already Have an Account?<a onclick="openFormLogin()" id="a-login-signup">Login</a></span>
+                            
+                            <hr>
+                            <label for="user-email">Email : </label>
+                            <input type="email" name="sign-up-email" id="" required/>
+                
+                            <label for="password">Password : </label>
+                            <input type="password" name="sign-up-password" id="" required/>
+                            
+                            <label for="repeat-pw">Repeat Password :</label>
+                            <input type="password" name="sign-up-repeat-pw" id="" required/>
+
+                            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                
+                            <div class="clearfix">
+                                <button type="submit" class="btn">Sign Up</button>
+                                <button type="button" onclick="closeFormSignUp()" class="btn cancel">Cancel</button>   
+                            </div>
+                        </form>
+                    </div>    
+
+                </li> 
+            </ul>
+        </div>
+        <!-- Navigasi menu end -->
+    </header>
+
+    
+        <div class="container_home" id="home">
+            <div class="img_left">
+                <div>
+                    <iframe id="slideIframe" src="slide.html" title="SlideImg">
+                    </iframe>
+                </div>
+            </div>
+            <div class="text_right">
+                <div>
+                    <h2>SELAMAT DATANG Di</h2>
+                    <h1>RENTAL STUDIO & REKAMAN,</h1><br><br>
+                    <h2>Rental Studio & Rekaman Merupakan tempat untuk menyewa tempat Studio dan Rekaman musik.</h2>
+                </div>     
+            </div>       
+        </div>
+        <div class="container_galery" id="gallery">
+            <h1>GALLERY</h1>
+            <hr style="width: 20%; border: 2px solid; color: white;"/><br><br>
+            <div class="box_galery">
+                <a><img src="assets/rental1.jpg" alt="rental1.jpg"></a>
+                <a><img src="assets/rental2.jpg" alt="rental2.jpg"></a>
+                <a><img src="assets/rental3.jpg" alt="rental3.jpg"></a>
+                <br>
+                <a><img src="assets/rental4.jpg" alt="rental4.jpg"></a>
+                <a><img src="assets/rental5.jpg" alt="rental5.jpg"></a>
+                <a><img src="assets/rental6.jpg" alt="rental6.jpg"></a>
+            </div>
+        </div>
+  
+        <div class="container_tarif" id="tarif">
+            <h1>TARIF & BIAYA</h1>
+            <hr style="width: 20%; border: 2px solid; color: white;"/><br><br>
+            <div class="grid-tarif">
+                <div class="paket">
+                    <h3>PAKET 1</h3>
+                    <div class="box-paket box-shadow">
+                        <span class="box-warna-paket">Jam / Rp. 100.000,-</span>
+                        <span>1 Jam (Hari Kerja)</span>                       
+                        <span>Penggunaan Seluruh Instruments</span>
+                        <span>Penggunaan Seluruh Fasilitas</span>
+                        <span>Operator Pendamping</span>
+                        <span>Free Wifi</span>
+                        <span>Tidak Mendapat CD (bawa sendiri)</span>
+                        <a class="booking" href="#pemesanan"><span class="box-warna-paket">Booking !</span></a>
+                    </div>
+                </div>
+                <div class="paket">
+                    <h3>PAKET 2</h3>
+                    <div class="box-paket box-shadow">
+                        <span class="box-warna-paket">1 Lagu Full / Rp. 1.000.000,-</span>
+                        <span>Up to 3 hari Kerja</span>
+                        <span>Termasuk editing, Mixing, Mastering</span>
+                        <span>Penggunaan Seluruh Fasilitas</span>
+                        <span>Operator Pendamping</span>
+                        <span>Free Wifi</span>
+                        <span>Mendapat CD</span>
+                        <a class="booking" href="#pemesanan"><span class="box-warna-paket">Booking !</span></a>             
+                    </div>
+                </div>
+                <div class="paket">
+                    <h3>PAKET 3</h3>
+                    <div class="box-paket box-shadow">
+                        <span class="box-warna-paket">Begadang / Rp. 500.000,-</span>
+                        <span>10 Jam Kerja (20:00 - 06:00)</span>
+                        <span>Penggunaan Seluruh Instruments</span>
+                        <span>Penggunaan Seluruh Fasilitas</span>
+                        <span>Operator Pendamping</span>
+                        <span>Free Wifi</span>
+                        <span>Mendapat CD</span>
+                        <a class="booking" href="#pemesanan"><span class="box-warna-paket">Booking !</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+        <div class="container-transaksi" id="booking-page">
+            <h1>PEMESANAN BOOKING / TRANSAKSI</h1>
+            <hr style="width: 20%; border: 2px solid; color: white;"/><br><br>
+                <form action="" class="form-transaksi">
+                    <div class="content-jadwal">
+                        <iframe src="Jadwal.html" title="Jadwal" id="IframeJadwal">
+                        </iframe>
+                    </div>
+                    <div class="content-transaksi">
+                        <label for="nama">Nama</label>
+                        <input type="text" id="nama" placeholder="Nama Lengkap..." required >
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Email..." required >
+
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="telepon" placeholder="Nomor hp...">
+
+                        <label for="paket">Paket</label>
+                        <select name="" id="" disabled>
+                            <option value="0">Paket : </option>
+                            <option value="1">Paket 1 - Jam/Rp.100.000,-</option>
+                            <option value="2">Paket 2 - Full Lagu/Rp.1.000.000,-</option>
+                            <option value="3">Paket 3 - Begadang/Rp.500.000,-</option>
+                        </select>
+
+                        <label for="ruang">Ruang</label>
+                        <select name="" id="" disabled>
+                            <option value="0">Ruang : </option>
+                            <option value="1">Ruang 1</option>
+                            <option value="2">Ruang 2</option>
+                            <option value="3">Ruang 3</option>
+                            <option value="4">Ruang 4</option>
+                            <option value="5">Ruang 5</option>
+                        </select>
+
+                        <label for="notes">Notes</label>
+                        <textarea rows="4" cols="50" placeholder="Isikan sesuatu..."></textarea>
+                        <input type="submit" id="booking-transaksi" value="Booking" class="box-shadow">
+                    </div>
+                </form>
+        </div>
+    
+    <footer>
+        <div class="container_footer">
+                    <a id="contact">
+                        <h1>Kantor Kami </h1>
+                        <hr width="20%" align="left">
+                        <br><br>
+                        <div class="info_kantor">
+                            <div class="info_kantor1">
+                                <p>Address : ...</p>
+                                <p>000-00000000</p>
+                                <p>examplemail@mail.com</p>
+                            </div>
+                            <div class="info_kantor2">
+                                <p>Jam Kerja</p>
+                                <hr width="20%" align="left">
+                                <p>Senin - Sabtu</p>
+                                <p>(07:00 - 23:00)</p>
+                            </div>
+                        </div> 
+                    </a>
+                    <a id="pesan">
+                        <h1>Contact</h1>
+                        <hr width="20%" align="left">
+                        <br>
+                        <div class="contact-form">
+                            <form onsubmit="alert('Berhasil Submit !');">
+
+                                            <label for="nama">Nama</label>
+                                            <input type="text" id="nama" placeholder="Nama Lengkap..." required >
+
+                                            <label for="telp">Telepon</label>
+                                            <input type="tel" id="telepon" placeholder="Nomor hp...">
+
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" placeholder="Email..." required >
+
+                                            <label for="pesan">Pesan</label>
+                                            <textarea rows="4" cols="50" placeholder="Isikan sesuatu..."></textarea>
+
+                                            <input type="submit" id="kirim-footer" value="Kirim" class="box-shadow">
+                            </form>
+                        </div>
+                        
+                    </a>
+                    
+        </div>
+    </footer>
+</body>
+
+<script type="text/javascript">
+    function openFormLogin() {
+        document.getElementById("myFormSignUp").style.display = "none";
+        document.getElementById("myFormLogin").style.display = "block";
+    }
+        
+    function closeFormLogin() {
+        document.getElementById("myFormLogin").style.display = "none";
+    }
+    function openFormSignUp() {
+        document.getElementById("myFormLogin").style.display = "none";
+        document.getElementById("myFormSignUp").style.display = "block";
+    }
+        
+    function closeFormSignUp() {
+        document.getElementById("myFormSignUp").style.display = "none";
+    }
+
+    let counter = 1;
+    setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 3){
+            counter = 1;
+        }
+    }, 5000);
+</script>
+</html>
