@@ -15,7 +15,6 @@ Project Web - Tugas Besar Kuliah
 Pengembangan dengan:
 1. HTML
 2. CSS
-3. Javascript
 
 # Develop by.
 * Naufal Sholahuddin (Pengembang Program)
