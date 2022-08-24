@@ -1,5 +1,5 @@
 # WEB-Rental-Studio-musik-dan-Rekaman
-Project Web - Tugas Besar Kuliah
+Project Web - Tugas Besar Kuliah - Universitas Indraprasta PGRI
 
 # Screnshoot Aplikasi
   <img src="/../main/Screenshoot Aplikasi/1.jpg" name="signup">
